@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>PetStore</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C25</id>
+				<title>Sign up with valid data</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<steps>1. Open https://petstore.octoperf.com/actions/Catalog.action
+
+2. Click [Sign In]
+
+3. Click [Register Now!]
+
+4. Fill in all fields with valid data
+
+5. Click [Save Account Information]</steps>
+										<expected>A new user is created in the database. User is redirected to main page </expected>
+									</custom>
+							</case>
+															<case>
+				<id>C26</id>
+				<title>Sign in with valid data</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is signed up</preconds>
+										<steps>1. Open https://petstore.octoperf.com/actions/Catalog.action
+2. Click [Sign In]
+3. Fill in &quot;Username&quot; field with data : Andrii222
+4. Fill in &quot;Password&quot; field with data : Q@r222
+5. Click [Login]</steps>
+										<expected>User signed in </expected>
+									</custom>
+							</case>
+															<case>
+				<id>C27</id>
+				<title>Search fish</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is logged in</preconds>
+										<steps>1. Open https://petstore.octoperf.com/actions/Catalog.action
+2. Fill in &quot;Fish&quot; in the search field https://prnt.sc/VcNJLuIz8ml6
+3. Click [Search]</steps>
+										<expected>All fish that is in stock must be represented</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C28</id>
+				<title>Search dogs</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is logged in</preconds>
+										<steps>1. Open https://petstore.octoperf.com/actions/Catalog.action
+2. Fill in search field with &quot;Dog&quot; https://prnt.sc/BFGIiFGARU-A
+3. Click [Search]</steps>
+										<expected>All dogs that are in stock must be represented</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C29</id>
+				<title>Search cats</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is logged in</preconds>
+										<steps>1. Open https://petstore.octoperf.com/actions/Catalog.action
+2. Fill in search field &quot;Cat&quot; https://prnt.sc/WYuukLpfXoHx
+3. Click [Search]</steps>
+										<expected>All cats that are in stock must be represented</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C30</id>
+				<title>Search reptiles</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is logged in</preconds>
+										<steps>1. Open https://petstore.octoperf.com/actions/Catalog.action
+
+2. Fill in search field &quot;Reptiles&quot; https://prnt.sc/Cj1jbk6ZM-WN
+
+3. Click [Search]</steps>
+										<expected>All reptiles that are in stock must be represented</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C31</id>
+				<title>Search birds</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<preconds>User is logged in</preconds>
+										<steps>1. Open https://petstore.octoperf.com/actions/Catalog.action
+2. Fill in search field &quot;Bird&quot; https://prnt.sc/7bkDoMPhhttJ
+3. Click [Search]</steps>
+										<expected>All birds that are in stock must be represented</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C32</id>
+				<title>Sign out</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in</preconds>
+										<steps>1. Open https://petstore.octoperf.com/actions/Catalog.action
+2. Click [Sign Out]
+
+</steps>
+										<expected>User is logged out</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C33</id>
+				<title>Add goods to cart</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>User is logged in </preconds>
+										<steps>1. Open https://petstore.octoperf.com/actions/Catalog.action
+2. Click [Fish] https://prnt.sc/vCm0lTl9E2SO
+3. Click [FI-SW-01] 
+4. Add to cart Large Angelfish
+
+</steps>
+										<expected>User is in cart https://petstore.octoperf.com/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-1, Large Angelfish is added to cart</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C34</id>
+				<title>Remove goods from cart</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. User is logged in
+2. User is in cart
+3. Large Angelfish is in cart</preconds>
+										<steps>1. Open https://petstore.octoperf.com/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-1
+2. Click [Remove] https://prnt.sc/zQlBvoJsALys</steps>
+										<expected>Large Angelfish is removed from cart</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C35</id>
+				<title>Update cart</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. User is logged in
+2. Large angelfish is in the cart. Quantity: 1
+
+</preconds>
+										<steps>1. Open https://petstore.octoperf.com/actions/Cart.action?removeItemFromCart=&amp;workingItemId=EST-11
+2. In the quantity field change value on 2 instead 1
+3. Click [Update Cart]</steps>
+										<expected>&quot;Sub Total&quot; is increased on 16.50$</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C36</id>
+				<title>Payment for goods</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. User is logged in
+2. User is in cart
+3. Large angelfish is added to cart</preconds>
+										<steps>1. Open https://petstore.octoperf.com/actions/Cart.action
+2. Click [Proceed to Checkout]
+3. From the dropdown choose a card type
+4. Fill in all fields with valid data
+5. Click [Continue]
+6. Click [Confirm]
+
+</steps>
+										<expected>Money are withdrawn from the user&apos;s card. The user is redirected to the page with order details</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
